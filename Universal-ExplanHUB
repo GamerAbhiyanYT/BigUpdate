@@ -1,7 +1,53 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Frame.BackgroundTransparency = 0
+Frame.Position = UDim2.new(0.006, 0,0.800, 0)
+Frame.Size = UDim2.new(0, 100,0, 30)
+
+UICorner.Parent = Frame
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Explan Toggle"
+TextButton.TextColor3 = Color3.fromRGB(0, 166, 58)
+TextButton.TextScaled = true
+TextButton.TextSize = 50.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q" , false , game)
+end)
+
+UICorner_2.Parent = TextButton
+
+UITextSizeConstraint.Parent = TextButton
+UITextSizeConstraint.MaxTextSize = 40
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/H3XDaemon/IreXion-UI-Library/main/IreXion%20UI%20Library"))()
 
 local Gui = Library:AddGui({
-	Title = {"ExplanHUB | 【V4.0】", " Universal"},
+	Title = {"ExplanHUB | 【V5.0】", " Universal"},
 	ThemeColor = Color3.fromRGB(0, 255, 0),
 	ToggleKey = Enum.KeyCode.Q,
 })
@@ -640,6 +686,11 @@ end)
 
 local Button = Category:AddButton("Esp Player 【Cham 2】", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerAbhiyanYT/SCRIPT-credit/main/SCRIPT%20%3D%20Esp%20Player%20%E3%80%90Cham%202%E3%80%91"))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/058MSFpG"))() -- Successfully Executed
+end)
+
+local Button = Category:AddButton("Universal ExplanHUB | 【V5.0】", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerAbhiyanYT/BigUpdate/main/Universal-ExplanHUB"))()
 	loadstring(game:HttpGet("https://pastebin.com/raw/058MSFpG"))() -- Successfully Executed
 end)
 
