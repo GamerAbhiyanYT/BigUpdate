@@ -348,7 +348,7 @@ local Button = Category:AddButton("Natural Disaster Survival | Green Ballon", fu
 	loadstring(game:HttpGet("https://pastebin.com/raw/058MSFpG"))() -- Successfully Executed
 end)
 
-local Button = Category:AddButton(Natural Disaster Survival | My Script", function()
+local Button = Category:AddButton("Natural Disaster Survival | My Script", function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/FktJaRpR"))()
 	loadstring(game:HttpGet("https://pastebin.com/raw/058MSFpG"))() -- Successfully Executed
 end)
