@@ -609,7 +609,7 @@ local Button = Category:AddButton("Copy Link Discord", function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/i3Cjd3Dk"))() -- Successfully Copy Key
 end)
 
-local Tab = Gui:AddTab(My Script")
+local Tab = Gui:AddTab("My Script")
 
 local Category = Tab:AddCategory("= My Script =")
 
